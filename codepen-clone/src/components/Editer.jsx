@@ -1,6 +1,15 @@
 import React from 'react'
 import { Box, styled } from '@mui/material'
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
+import { Controlled as ControlledEditer } from 'react-codemirror2';
+
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/material.css';
+import 'codemirror/mode/xml/xml';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/css/css';
+
+import '../App.css';
 
 const Heading = styled(Box)(
     `
@@ -47,11 +56,16 @@ export default function Editer() {
                 <CloseFullscreenIcon />
 
             </Header>
-
-            <Box>
-
-
-            </Box>
+            <ControlledEditer
+                className='controlled-editor'
+                options={
+                    {
+                        mode: 'xml',
+                        theme: 'material',
+                        lineNumbers: true
+                    }
+                }
+            />
 
         </Box>
 
