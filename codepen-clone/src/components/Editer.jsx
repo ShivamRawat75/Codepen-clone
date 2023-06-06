@@ -29,27 +29,38 @@ const Header = styled(Box)(`
     font-weight:700;
 `)
 
-export default function Editer() {
+const Container=styled(Box)(`
+
+    flex-grow:1;
+    flex-basic:0;
+    display:flex;
+    flex-direction:column;
+    padding: 0px 8px 8px;
+
+`)
+
+export default function Editer({heading,icon,color}) {
     return (
-        <Box>
+        <Container>
             <Header>
                 <Heading>
 
                     <Box component="span"
                         style={{
-                            background: 'red',
+                            background: color,
                             display: 'flex',
                             width: 20,
                             height: 20,
                             placeContent: 'center',
                             borderRadius: 5,
                             marginRight: 5,
-                            paddingBottom: 2
+                            paddingBottom: 2,
+                            color:'#000'
 
                         }}
                     >
 
-                        /</Box>HTML
+                        {icon}</Box>{heading}
 
                 </Heading>
 
@@ -67,7 +78,7 @@ export default function Editer() {
                 }
             />
 
-        </Box>
+        </Container>
 
     )
 }

@@ -1,9 +1,14 @@
 
+import DataProvider from './context/DataProvider';
+
 import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <Home/>
+      <DataProvider>
+        <Home />
+      </DataProvider>
+
     </div>
   );
 }
