@@ -37,6 +37,7 @@ const Container=styled(Box)(`
     display:flex;
     flex-direction:column;
     padding: 0px 8px 8px;
+    position:static;
 
 `)
 
